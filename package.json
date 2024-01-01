@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint src --max-warnings=0",
+    "typecheck": "bash -c tsc --noEmit --skipLibCheck",
     "prepare": "husky install && chmod +x .husky/*",
     "commit": "git cz"
   },
@@ -31,6 +32,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.0.4",
     "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
