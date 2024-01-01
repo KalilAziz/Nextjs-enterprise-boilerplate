@@ -7,6 +7,7 @@ export const env = createEnv({
    * Will throw if you access these variables on the client.
    */
   server: {
+    BASE_URL: z.string().url().default('http://localhost:3000'),
     DATABASE_URL: z.string().url(),
     OPEN_AI_API_KEY: z.string().min(1),
   },
@@ -25,6 +26,7 @@ export const env = createEnv({
    * 💡 You'll get type errors if not all variables from `server` & `client` are included here.
    */
   runtimeEnv: {
+    BASE_URL: process.env.BASE_URL,
     DATABASE_URL: process.env.DATABASE_URL,
     OPEN_AI_API_KEY: process.env.OPEN_AI_API_KEY,
     NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY,
