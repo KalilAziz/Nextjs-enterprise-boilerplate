@@ -1,0 +1,10 @@
+# .github/workflows/dependabot.yml
+
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: '/'
+    schedule:
+      interval: 'daily'
+      time: '05:00'
+    open-pull-requests-limit: 10
