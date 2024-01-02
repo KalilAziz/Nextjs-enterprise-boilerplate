@@ -1,7 +1,15 @@
 # .github/workflows/build.yaml
 
 name: Sonar Qube
-on: [pull_request]
+on: 
+  pull_request:
+    branches:
+      - develop
+  push:
+    branches:
+      - develop
+      - main
+
 
 jobs:
   sonarqube:
