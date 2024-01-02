@@ -10,7 +10,7 @@ export default defineConfig({
     environment: 'jsdom',
 		dir: './src',
     coverage: {
-      exclude: ['**/node_modules/**', '**/.next/**', '**/*.d.ts', '*.config.js', '*.config.ts', "**/env.mjs", "**/config/*.ts", "**/index.ts"],
+      exclude: ['**/node_modules/**', '**/.next/**', '**/*.d.ts', '*.config.js', '*.config.ts', "**/env.mjs", "**/config/*.ts", "**/index.ts",  "**/page.tsx",  "**/layout.tsx",  "**/error.tss",  "**/loadign.tss"],
       reporter: ['lcov', 'text'],
     },
   },
