@@ -3,7 +3,7 @@ describe('template spec', () => {
     cy.visit('/')
   })
 
-  it('passes', () => {
-    cy.get('h2').should('contain', 'Templates')
+  it('Should be able to render home page', () => {
+    cy.get('h2').should('contain', 'Next.js')
   })
 })
